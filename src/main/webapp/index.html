@@ -1,0 +1,17 @@
+<html ng-app="TracingApp">
+<head>
+  
+  <script src="js/angular.js"></script>
+  <script src="js/controllers.js"></script>
+</head>
+<body ng-controller="TraceListCtrl">
+
+  <ul>
+    <li ng-repeat="trace in traces">
+      <span>{{trace.id}}</span>
+      <p>{{trace.parentid}}</p>
+    </li>
+  </ul>
+
+</body>
+</html>
