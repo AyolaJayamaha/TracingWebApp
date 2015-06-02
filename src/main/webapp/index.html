@@ -78,12 +78,22 @@
 
       <div class="page-header">
 	  
-		<ul>
-			<li ng-repeat="trace in traces">
-				<span>{{trace.parent_id}}</span>
-				<p>{{trace.description}}</p>
-			</li>
-		</ul>
+		<table class="table table-striped">
+			<thead>
+			<tr>          
+			  <th>Parent ID</th>
+			  <th>Span ID</th>
+			  <th>Description</th>
+			</tr>
+		  </thead>
+		  <tbody>
+			<tr ng-repeat="trace in traces">			  
+			  <td>{{trace.parent_id}}</td>
+			  <td>{{trace.span_id}}</td>
+			  <td>{{trace.description}}</td>
+			</tr>        
+		  </tbody>
+		</table>
 </div>
 </body>
 </html>
