@@ -13,7 +13,12 @@ TraceApp.config(['$routeProvider',
         templateUrl: 'partials/search.html'
       }).
       when('/graph', {
-        templateUrl: 'partials/graph.html'
+        templateUrl: 'partials/graph.html',
+        controller: 'TraceFlameChartCtrl'
+      }).      
+      when('/count-chart', {
+        templateUrl: 'partials/count-chart.html',
+        controller: 'TraceCountChartCtrl'
       }).
       when('/help', {
         templateUrl: 'partials/help.html'
