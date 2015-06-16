@@ -20,6 +20,10 @@ TraceApp.config(['$routeProvider',
         templateUrl: 'partials/count-chart.html',
         controller: 'TraceCountChartCtrl'
       }).
+      when('/trace-distribution', {
+        templateUrl: 'partials/trace-distribution.html',
+        controller: 'TraceDistChartCtrl'
+      }).
       when('/help', {
         templateUrl: 'partials/help.html'
       }).

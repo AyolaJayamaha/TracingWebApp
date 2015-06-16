@@ -47,3 +47,10 @@ TraceCtrl.controller('TraceFlameChartCtrl', function ($scope) {
         $scope.data = barChart.data;
 
 });
+    TraceCtrl.controller('TraceDistChartCtrl', function ($scope) {
+        /* Chart options */
+         $scope.options = pieChart.options;
+        /* Chart data */        
+        $scope.data = pieChart.data;
+
+});
