@@ -24,6 +24,10 @@ TraceApp.config(['$routeProvider',
         templateUrl: 'partials/nvd3-chart.html',
         controller: 'TraceDistChartCtrl'
       }).
+	  when('/trace-timeline', {
+        templateUrl: 'partials/google-chart.html',
+        controller: 'TimeLineCtrl'
+      }).
       when('/help', {
         templateUrl: 'partials/help.html'
       }).

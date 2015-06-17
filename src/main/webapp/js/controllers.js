@@ -113,3 +113,10 @@ TraceCtrl.controller('TraceDistChartCtrl', function($scope) {
   $scope.data = pieChart.data;
 
 });
+
+TraceCtrl.controller('TimeLineCtrl', function($scope) {
+  $scope.page = {
+    title: 'Timeline for Trace'
+  };
+  $scope.chartObject = timeLine;
+});

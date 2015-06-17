@@ -1,6 +1,107 @@
 var barChart = {};
 var pieChart = {};
+var timeLine = {};
 
+timeLine = {
+  "type": "Timeline",
+  "displayed": true,
+  "data": {
+    "cols": [
+      {
+        "id": "TraceID",
+        "label": "TraceID",
+        "type": "string",
+        "p": {}
+      },
+      {
+        "id": "Label",
+        "label": "Label",
+        "type": "string",
+        "p": {}
+      },
+      {
+        "id": "Start",
+        "label": "Start",
+        "type": "date",
+        "p": {}
+      },
+      {
+        "id": "End",
+        "label": "End",
+        "type": "date",
+        "p": {}
+      }
+    ],
+    "rows": [
+      {
+        "c": [
+          {
+            "v": "Trace 01"
+          },
+          {
+            "v": "Writing mutation batch for table: MY_TABLE1"
+          },
+          {
+            "v": new Date(2015, 3, 29, 8,33,13)
+          },
+          {
+            "v": new Date(2015, 3, 29 ,8,37,18)
+          }
+        ]
+      },
+	   {
+        "c": [
+          {
+            "v": "Trace 02"
+          },
+          {
+            "v": "Parallel scanner for table: MY_TABLE1"
+          },
+          {
+            "v": new Date(2015, 3, 29, 9,59,58)
+          },
+          {
+            "v": new Date(2015, 3, 29 , 10,10,58)
+          }
+        ]
+      },
+	  {
+        "c": [
+          {
+            "v": "Trace 03"
+          },
+          {
+            "v": "Creating basic query for [CLIENT 1-CHUNK PARALLEL 1-WAY POINT LOOKUP ON 1 KEY OVER MY_TABLE1]"
+          },
+          {
+            "v": new Date(2015, 3, 29, 10,12,10)
+          },
+          {
+            "v": new Date(2015, 3, 29 ,10,15,18)
+          }
+        ]
+      },
+      {
+        "c": [
+          {
+            "v": "Trace 04"
+          },
+		  {
+            "v": "Parallel scanner for table: MY_TABLE1"
+          },
+          {
+            "v":  new Date(2015, 3, 29, 10,13,18)
+          },
+          {
+            "v":  new Date(2015, 3, 29,10,16,55)
+          }          
+        ]
+      }      
+    ]
+  },
+  "options": {},
+  "formatters": {}
+};
 pieChart.options = {
   chart: {
     type: "pieChart",
