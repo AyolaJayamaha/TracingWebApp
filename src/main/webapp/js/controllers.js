@@ -1,4 +1,4 @@
-var TraceCtrl = angular.module('TracingCtrl', ['nvd3']);
+var TraceCtrl = angular.module('TracingCtrl', ['nvd3','googlechart']);
 
 //listing trace from json
 TraceCtrl.controller('TraceListCtrl', function ($scope) {
@@ -50,6 +50,9 @@ TraceCtrl.controller('TraceFlameChartCtrl', function ($scope) {
     TraceCtrl.controller('TraceDistChartCtrl', function ($scope) {
         /* Chart options */
          $scope.options = pieChart.options;
+		 $scope.page = {title : 'Trace Distribution'};
+		 console.log($scope.options);
+		// $scope.options.chart.type = 'PieChart';
         /* Chart data */        
         $scope.data = pieChart.data;
 
