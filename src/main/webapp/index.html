@@ -34,6 +34,7 @@
     <script src="js/lib/angular-route.js"></script>
     <script src="js/app.js"></script>
     <script src="js/controllers.js"></script>
+    <script src="js/controllers/accordion-controllers.js"></script>
     <script src="js/tree.js"></script>
 
     <!-- smoke / flame chart -->
@@ -43,7 +44,8 @@
     <script src="js/lib/nv.d3.js"></script>
     <!-- or use another assembly -->
     <script src="js/lib/angular-nvd3.js"></script>
-	<script src="js/lib/ng-google-chart.js"></script>
+    <script src="js/lib/ng-google-chart.js"></script>
+    <script src="js/lib/ui-bootstrap-tpls.js"></script>
 
     <link rel="stylesheet" href="css/nv.d3.css">
 
@@ -67,7 +69,6 @@
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
                     <li><a href="#dependency-tree">Dependency Tree</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Features<span class="caret"></span></a>
@@ -82,6 +83,8 @@
                             <li><a href="#help">Help</a></li>
                         </ul>
                     </li>
+                    <li><a href="#about">About</a></li>
+
                 </ul>
             </div>
             <!--/.nav-collapse -->

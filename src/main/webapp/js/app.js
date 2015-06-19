@@ -1,6 +1,7 @@
 var TraceApp = angular.module('TracingAppCtrl', [
   'ngRoute',
-  'TracingCtrl'
+  'TracingCtrl',
+   'UICtrl'
 ]);
 
 TraceApp.config(['$routeProvider',

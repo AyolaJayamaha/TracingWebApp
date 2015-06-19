@@ -104,7 +104,7 @@ timeLine = {
 };
 pieChart.options = {
   chart: {
-    type: "pieChart",
+    type: "cumulativeLineChart",
     height: 400,
     width: 900,
     showLabels: true,
