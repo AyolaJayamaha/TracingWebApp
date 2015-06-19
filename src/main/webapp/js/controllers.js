@@ -122,10 +122,3 @@ TraceCtrl.controller('TraceDistChartCtrl', function($scope) {
     ];
   $scope.myDistributeType = $scope.distributeTypes[0];
 });
-
-TraceCtrl.controller('TimeLineCtrl', function($scope) {
-  $scope.page = {
-    title: 'Timeline for Trace'
-  };
-  $scope.chartObject = timeLine;
-});

@@ -23,7 +23,6 @@ xAxis: {
 },
 yAxis: {
     axisLabel: "Trace Count",
-    axisLabelDistance: 10
 }
     }
 };
