@@ -1,0 +1,33 @@
+[{
+  "trace_id": "477902",
+  "parent_id": "477902",
+  "span_id": "8327854761235348907",
+  "description": "Creating basic query for [CLIENT 1-CHUNK PARALLEL 1-WAY FULL SCAN OVER SYSTEM.TRACING_STATS, SERVER FILTER BY DESCRIPTION LIKE ' %MY_TABLE1% ']",
+  "start_time": "1434197402975",
+  "end_time": "1434197403068",
+  "hostname": "pc",
+  "tags.count": "0",
+  "annotations.count": "0"
+},
+{
+  "trace_id": "477902",
+  "parent_id": "477902",
+  "span_id": "8327854761235348907",
+  "description": "Creating basic query for [CLIENT 1-CHUNK PARALLEL 1-WAY FULL SCAN OVER SYSTEM.TRACING_STATS, SERVER FILTER BY DESCRIPTION LIKE ' %MY_TABLE1% ']",
+  "start_time": "1434197402975",
+  "end_time": "1434197403068",
+  "hostname": "pc",
+  "tags.count": "0",
+  "annotations.count": "0"
+},
+{
+  "trace_id": "477902",
+  "parent_id": "477902",
+  "span_id": "8327854761235348907",
+  "description": "Creating basic query for [CLIENT 1-CHUNK PARALLEL 1-WAY FULL SCAN OVER SYSTEM.TRACING_STATS, SERVER FILTER BY DESCRIPTION LIKE ' %MY_TABLE1% ']",
+  "start_time": "1434197402975",
+  "end_time": "1434197403068",
+  "hostname": "pc",
+  "tags.count": "0",
+  "annotations.count": "0"
+}]

@@ -1,7 +1,7 @@
 'use strict';
 
 var TimeLineCtrl = angular.module('TimeLineCtrl', ['ui.bootstrap']);
-TimeLineCtrl.controller('TraceTimeLineCtrl', function($scope) {
+TimeLineCtrl.controller('TraceTimeLineCtrl', function($scope,$http) {
   $scope.page = {
     title: 'Timeline for Trace'
   };
@@ -22,11 +22,22 @@ TimeLineCtrl.controller('TraceTimeLineCtrl', function($scope) {
       }
     }
   }
-
+$scope.trace = {};
   $scope.addItemToTimeLine = function(item) {
+    //
+    
+    $http.get('./js/api/trace.json').
+  success(function(data, status, headers, config) {
+    $scope.trace = data;
+    console.log(data);
+  }).
+  error(function(data, status, headers, config) {
+    console.log('error.....');
+  });
+  //
     var nextid = $scope.chartObject.data.rows.length;
-    console.log($scope.chartObject.data.rows.length);
-    console.log($scope.chartObject.data.rows[0]);
+    console.log($scope.chartObject.data.rows);
+    console.log($scope.trace);
     //convert from sql to js
     var getDate = function(dateFloat) {
       //var myObj = $.parseJSON('{"date_created":"1273185387"}'),
@@ -37,11 +48,11 @@ TimeLineCtrl.controller('TraceTimeLineCtrl', function($scope) {
       "c": [{
         "v": "Trace " + nextid
       }, {
-        "v": "Writing mutation batch for table: MY_TABLE1"
+        "v": $scope.trace.description
       }, {
-        "v": new Date(1434196101623)
+        "v": new Date(parseFloat($scope.trace.start_time))
       }, {
-        "v": new Date(1434196101784)
+        "v": new Date(parseFloat($scope.trace.end_time)+100000)
       }]
     }
   };
