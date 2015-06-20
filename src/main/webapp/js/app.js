@@ -2,7 +2,8 @@ var TraceApp = angular.module('TracingAppCtrl', [
   'ngRoute',
   'TracingCtrl',
    'UICtrl',
-   'TimeLineCtrl'
+   'TimeLineCtrl',
+   'SearchCtrl'
 ]);
 
 TraceApp.config(['$routeProvider',
@@ -12,7 +13,8 @@ TraceApp.config(['$routeProvider',
         templateUrl: 'partials/about.html'
       }).
       when('/search', {
-        templateUrl: 'partials/search.html'
+        templateUrl: 'partials/search.html',
+        controller: 'SearchTraceCtrl'
       }).
       when('/graph', {
         templateUrl: 'partials/graph.html',

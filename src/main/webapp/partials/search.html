@@ -2,4 +2,54 @@
     <h1>Search</h1>        
 </div>
 
-<div class="page-header"></div>
+<div class="page-header">
+
+<!--To-Add for main.CSS-->
+<style>
+  .full button span {
+    background-color: limegreen;
+    border-radius: 32px;
+    color: black;
+  }
+  .partially button span {
+    background-color: orange;
+    border-radius: 32px;
+    color: black;
+  }
+</style>
+<div ng-controller="SearchTraceCtrl">
+    <pre>Start Date is: <em>{{dt | date:'fullDate' }}</em> <br>End Date is: <em>{{edt | date:'fullDate' }}</em></pre>
+
+    <!--h4>Inline</h4>
+    <div style="display:inline-block; min-height:290px;">
+      <datepicker ng-model="dt" min-date="minDate" show-weeks="true" class="well well-sm" custom-class="getDayClass(date, mode)"></datepicker>
+    </div-->
+
+
+    <div class="row">
+        <div class="col-md-3"><p>Start Date: </p></div><div class="col-md-3">
+            <p class="input-group">
+              <input type="date" class="form-control" datepicker-popup ng-model="dt" is-open="opened" min-date="minDate" max-date="'2015-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
+              <span class="input-group-btn">
+                <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+              </span>
+            </p>
+        </div></div>
+
+<div class="row">
+        <div class="col-md-3"><p>End Date: </p></div><div class="col-md-3">
+            <p class="input-group">
+              <input type="date" class="form-control" datepicker-popup ng-model="edt" is-open="opened" min-date="minDate" max-date="'2015-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
+              <span class="input-group-btn">
+                <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+              </span>
+            </p>
+        </div>
+    </div></div>
+
+
+
+    <hr />
+
+</div>
+</div>

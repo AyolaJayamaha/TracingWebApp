@@ -22,28 +22,14 @@ TimeLineCtrl.controller('TraceTimeLineCtrl', function($scope,$http) {
       }
     }
   }
+
 $scope.trace = {};
   $scope.addItemToTimeLine = function(item) {
-    //
-    
     $http.get('./js/api/trace.json').
   success(function(data, status, headers, config) {
     $scope.trace = data;
-    console.log(data);
-  }).
-  error(function(data, status, headers, config) {
-    console.log('error.....');
-  });
-  //
     var nextid = $scope.chartObject.data.rows.length;
-    console.log($scope.chartObject.data.rows);
-    console.log($scope.trace);
-    //convert from sql to js
-    var getDate = function(dateFloat) {
-      //var myObj = $.parseJSON('{"date_created":"1273185387"}'),
-      var myDate = new Date(1000 * dateFloat);
-      return myDate.toString();
-    }
+    //adding to the time line
     $scope.chartObject.data.rows[nextid] = {
       "c": [{
         "v": "Trace " + nextid
@@ -52,8 +38,14 @@ $scope.trace = {};
       }, {
         "v": new Date(parseFloat($scope.trace.start_time))
       }, {
-        "v": new Date(parseFloat($scope.trace.end_time)+100000)
+        "v": new Date(parseFloat($scope.trace.end_time))
       }]
     }
+  }).
+  error(function(data, status, headers, config) {
+    console.log('error.....');
+  });
+
+
   };
 });

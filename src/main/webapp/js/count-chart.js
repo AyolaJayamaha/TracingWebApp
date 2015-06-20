@@ -42,7 +42,7 @@ timeLine = {
             "v": "Writing mutation batch for table: MY_TABLE1"
           },
           {
-            "v": new Date(1434194860485)
+            "v": new Date(1434196101623)
           },
           {
             "v": new Date(1434196101784)
@@ -58,7 +58,7 @@ timeLine = {
             "v": "Parallel scanner for table: MY_TABLE1"
           },
           {
-            "v": new Date(1434194860485)
+            "v": new Date(1434196184377)
           },
           {
             "v": new Date(1434196184388)
@@ -74,7 +74,7 @@ timeLine = {
             "v": "Creating basic query for [CLIENT 1-CHUNK PARALLEL 1-WAY POINT LOOKUP ON 1 KEY OVER MY_TABLE1]"
           },
           {
-            "v": new Date(1434194860485)
+            "v": new Date(1434196132606)
           },
           {
             "v": new Date(1434196132648)
