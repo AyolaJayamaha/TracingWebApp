@@ -16,10 +16,6 @@ TraceApp.config(['$routeProvider',
         templateUrl: 'partials/search.html',
         controller: 'SearchTraceCtrl'
       }).
-      when('/graph', {
-        templateUrl: 'partials/graph.html',
-        controller: 'TraceFlameChartCtrl'
-      }).      
       when('/count-chart', {
         templateUrl: 'partials/nvd3-chart.html',
         controller: 'TraceCountChartCtrl'
