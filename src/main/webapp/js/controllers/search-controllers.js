@@ -7,6 +7,8 @@ $scope.sqlQuery="select * from MyTabel";
 $scope.search = function(sqlQuery) {
   GenerateStatementService.setSQLQuery(sqlQuery);
   console.log(GenerateStatementService.getSQLQuery());
+  console.log(GenerateStatementService.getTracingStatement());
+  $scope.tracingStatement = ' ---> ' +GenerateStatementService.getTracingStatement();
 };
   //Date picker
   $scope.edt = new Date();
