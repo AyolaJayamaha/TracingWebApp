@@ -6,7 +6,10 @@
 
   <!--To-Add for main.CSS-->
   <div ng-controller="SearchTraceCtrl">
-    <pre>Start Date is: <em>{{dt | date:'fullDate' }}</em> <br>End Date is: <em>{{edt | date:'fullDate' }}</em></pre>
+    <pre>Start Date is: <em>{{dt | date:'fullDate' }}</em>
+End Date is: <em>{{edt | date:'fullDate' }}</em>
+SQL Statment is: <em>{{sqlQuery}}</em>
+    </pre>
 
     <div class="row">
       <div class="col-md-3">
@@ -39,7 +42,16 @@
       </p>
     </div>
   </div>
-
+  <!--SQL uery mapping-->
+    <div class="row">
+      <div class="col-md-3">
+      <p>SQL Query: </p>
+        </div>
+         <div class="col-md-9">
+      <p><input type="text" class="form-control" ng-model="sqlQuery"/></p>
+        </div>
+      </div> <!-- /row -->
+    <button type="button" class="btn btn-default" ng-click="search(sqlQuery)"><i class="fa fa-search"></i> Search</button>
   <hr />
 
 </div>

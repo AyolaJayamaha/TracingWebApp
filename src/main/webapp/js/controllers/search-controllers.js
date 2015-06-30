@@ -1,9 +1,16 @@
 'use strict';
 
 var SearchCtrl = angular.module('SearchCtrl', ['ui.bootstrap']);
-SearchCtrl.controller('SearchTraceCtrl', function($scope) {
+SearchCtrl.controller('SearchTraceCtrl', function($scope, GenerateStatementService) {
+
+$scope.sqlQuery="select * from MyTabel";
+$scope.search = function(sqlQuery) {
+  GenerateStatementService.setSQLQuery(sqlQuery);
+  console.log(GenerateStatementService.getSQLQuery());
+};
+  //Date picker
   $scope.edt = new Date();
-$scope.today = function() {
+  $scope.today = function() {
     $scope.dt = new Date();
   };
   $scope.today();
